@@ -17,7 +17,8 @@ BEGIN
     END LOOP;
 END $$;
 
-
+-- Analyze the partitioned tables to update statistics
+ANALYZE sales_data;
 
 -- Query to count rows in each partition
 SELECT table_name, row_count 
